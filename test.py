@@ -12,6 +12,9 @@ clock = pygame.time.Clock()
 
 renderer = Renderer(1)
 test_square = gameobjects.GameRect(Vector2(100, 100), 0, 'red', Vector2(50, 50))
+twonk = Twonk()
+
+twonk.create()
 
 while run:
     for event in pygame.event.get():

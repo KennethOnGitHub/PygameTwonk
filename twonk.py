@@ -1,12 +1,11 @@
 import pygame
 import gameobjects
-from renderer import Renderer
+import objecthandler
+import renderer
+
+
 Vector2 = pygame.Vector2
 
-class Twonk:
-    def __init__(self) -> None:
-        self.renderer:Renderer = Renderer()
-        self.gameobjects = gameobjects
-
-    def create_screen(self, screensize:Vector2) -> None:
-        pass
+renderer= Renderer()
+gameobjects = gameobjects
+objecthandler = ObjectHandler(self.renderer)

@@ -1,4 +1,6 @@
 import pygame
+
+from gameobjects import Vector2
 Vector2 = pygame.Vector2
 
 class GameObject:
@@ -49,4 +51,8 @@ class GameRect(GameObject):
     
     def render(self):
         pygame.draw.rect(self.surface, self.colour, self.rect)
+
+class Sprite(GameObject):
+    def __init__(self, position: Vector2, layer: int) -> None:
+        super().__init__(position, layer)
         

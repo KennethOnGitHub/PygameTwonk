@@ -1,5 +1,8 @@
 import pygame
+import gameobjects
+import renderer
 
-class ObjectHandler:
-    def __init__(self) -> None:
-        pass
+def update_objects(self):
+    for object 
+
+        
