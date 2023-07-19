@@ -2,7 +2,13 @@ import pygame
 import gameobjects
 import renderer
 
-def update_objects(self):
-    for object 
+objects = []
+
+def add_object(object):
+    objects.append(object)
+    renderer.add_object(object)
+
+def update_objects():
+    pass
 
         
