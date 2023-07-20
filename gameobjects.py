@@ -48,9 +48,9 @@ class GameRect(GameObject):
         super().__init__(position, layer)
         self.colour = colour
         self.size = size
-        self.rect = pygame.Rect(self.position - self.size/2, self.size)
     
     def render(self):
+        self.rect = pygame.Rect(self.position - self.size/2, self.size) #creating rects every frame may be a little bad for performance, but I think it will reduce the number of bugs in the future
         pygame.draw.rect(self.surface, self.colour, self.rect) #issue, moving squares will not update the rect
 
 class Sprite(GameObject):

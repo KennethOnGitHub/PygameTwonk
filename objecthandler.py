@@ -9,6 +9,8 @@ def add_object(object):
     renderer.add_object(object)
 
 def update_objects():
-    pass
+    object:gameobjects.GameObject
+    for object in objects:
+        object.update()
 
         

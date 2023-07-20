@@ -39,8 +39,8 @@ class testboi(twonk.gameobjects.GameRect):
     def __init__(self, position: Vector2, layer: int, colour:pygame.Color, size:Vector2) -> None:
         super().__init__(position, layer, colour, size)
     
-    # def update(self):
-    #     self.moveby(Vector2(1, 1))
+    def update(self):
+        self.moveby(Vector2(1, 1))
 
 testieee = testboi(Vector2(32, 32), 0, 'purple', Vector2(50, 50))
 
