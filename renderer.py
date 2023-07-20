@@ -14,15 +14,13 @@ def init(layercount:int=1, colour:pygame.color='blueviolet'):
     screen = pygame.display.get_surface()
 
 def render():
-    print(screen)
     screen.fill(background_colour)
-    print(layers)
     for layer in layers:
         object:GameObject
         for object in layer: 
             object.render()
 
-        pygame.display.flip()
+    pygame.display.flip()
 
 def add_layer( layerlevel=None):
     if layerlevel == None:

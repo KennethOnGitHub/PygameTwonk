@@ -51,7 +51,7 @@ class GameRect(GameObject):
         self.rect = pygame.Rect(self.position - self.size/2, self.size)
     
     def render(self):
-        pygame.draw.rect(self.surface, self.colour, self.rect)
+        pygame.draw.rect(self.surface, self.colour, self.rect) #issue, moving squares will not update the rect
 
 class Sprite(GameObject):
     def __init__(self, position: Vector2, layer: int) -> None:
