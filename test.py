@@ -32,7 +32,7 @@ import twonk
 
 twonk.innit_bruv(screensize=pygame.Vector2(1366, 768), layercount=2, backgroundcolour='blue')
 
-testsqure = twonk.gameobjects.GameRect(pygame.Vector2(50, 50), 0, 'red', pygame.Vector2(50, 50))
+testsqure = twonk.gameobjects.GameRect(pygame.Vector2(0, 0), 0, 'red', pygame.Vector2(50, 50))
 testline = twonk.gameobjects.GameLine(pygame.Vector2(200, 200), 0, 'black', pygame.Vector2(500, 500), 3)
 
 class testboi(twonk.gameobjects.GameRect):

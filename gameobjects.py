@@ -1,9 +1,10 @@
 import pygame
 import objecthandler
+from abc import ABC, abstractmethod
 
 Vector2 = pygame.Vector2
 
-class GameObject:
+class GameObject(ABC):
     def __init__(self, position:Vector2, layer:int) -> None:
         self.surface = pygame.display.get_surface() # may change this in the future
         self.position:pygame.Vector2 = position
@@ -52,6 +53,8 @@ class GameRect(GameObject):
     def render(self):
         self.rect = pygame.Rect(self.position - self.size/2, self.size) #creating rects every frame may be a little bad for performance, but I think it will reduce the number of bugs in the future
         pygame.draw.rect(self.surface, self.colour, self.rect) #issue, moving squares will not update the rect
+
+        
 
 class Sprite(GameObject):
     def __init__(self, position: Vector2, layer: int) -> None:
